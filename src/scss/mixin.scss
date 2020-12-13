@@ -1,0 +1,19 @@
+.fixed {
+    position: fixed;
+    width: 100%;
+    min-width: 1370px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: #FFF;
+}
+
+.ellipsis-word {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}

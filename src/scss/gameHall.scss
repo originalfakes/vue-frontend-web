@@ -1,0 +1,237 @@
+.container {
+    position: relative;
+    background: url('/static/container-bg.png') #f9fbff 0 0 no-repeat;
+    text-align: left;
+    min-height: 900px;
+
+    .title {
+        margin: 80px 0 0 116px;
+        animation: transitionLeft .5s ease-in-out;
+    }
+
+    .game-list {
+        display: block;
+        margin: 76px 0 0 120px;
+        animation: transitionLeft .5s ease-in-out;
+    }
+
+    .play-now {
+        position: relative;
+        background: linear-gradient(90deg, #B8A37F 35%, #C7B28D 60%);
+        width: 280px;
+        height: 54px;
+        line-height: 54px;
+        margin: 80px 0 0 120px;
+        border: none;
+        color: #fff;
+        font-style: italic;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 30px;
+        box-shadow: 2px 2px 2px rgba(20%, 20%, 40%, 0.6), 4px 4px 6px rgba(20%, 20%, 40%, 0.4), 6px 6px 12px rgba(20%, 20%, 40%, 0.4);
+        outline: none;
+        letter-spacing: 2px;
+        text-align: center;
+        animation: transitionLeft .5s ease-in-out;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 822px;
+        animation: scale .5s ease-out;
+
+        .player {
+            position: absolute;
+            top: 0;
+            left: 520px;
+            width: 1000px;
+            height: 822px;
+        }
+    
+        .bg-right {
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 520px;
+            width: 1140px;
+            height: 822px;
+        }
+    
+        .float {
+            position: absolute;
+            top: 0;
+            width: 430px;
+            height: 844px;
+            animation: floatTransition 1.8s linear infinite alternate;
+        }
+    
+        .left-pic {
+            left: 465px;
+        }
+    
+        .right-pic {
+            left: 1215px;
+    
+        }
+    }
+    
+    .bottom {
+        width: 1370px;
+        height: 76px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 28px;
+        left: 0;
+        right: 0;
+
+        .row {
+            position: absolute;
+            z-index: 1;
+            width: 75%;
+            height: 56px;
+            top: 0;
+            transform: skew(-50deg);
+            background-image: linear-gradient(180deg, #fdfdff, #edf0fa);
+            box-shadow: 0 -6px 12px 0 rgba(0, 0, 0, .04);
+        }
+
+        .row-1 {
+            left: 33px;
+            transform: skew(-50deg);
+        }
+
+        .row-2 {
+            right: 33px;
+            transform: skew(50deg);
+        }
+
+        .bar {
+            content: "";
+            position: absolute;
+            height: 20px;
+            width: 100%;
+            background-image: linear-gradient(0deg, #f8faff, #dae0ed);
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, .1), inset 0 1px 0 0 #f7f9ff;
+            bottom: 0;
+            left: 0;
+        }
+
+        ul {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            z-index: 2;
+
+            li {
+                display: flex;
+                align-items: center;
+                height: 56px;
+                margin: 0 25px;
+                color: #707070;
+                font-size: 16px;
+                transition: all .5s;
+                cursor: pointer;
+
+                img {
+                    vertical-align: middle;
+                }
+
+                .active {
+                    color: #B8A37F;
+                    font-weight: bold;
+                }
+
+                &:hover {
+                    color: #B8A37F;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and ( max-width: 1740px ) {
+    .bg-right {
+        left: 400px !important;
+    }
+
+    .right-pic {
+        left: 1100px !important;
+    }
+}
+
+@media screen and ( max-width: 1565px ) {
+    .bg-right {
+        width: 1100px !important;
+    }
+
+    .player {
+        left: 446px !important;
+    }
+
+    .right-pic {
+        left: 1000px !important;
+    }
+}
+
+@media screen and ( max-width: 1520px ) {
+    .bg-right {
+        width: 1000px !important;
+    }
+
+    .player {
+        width: 900px !important;
+        height: 721px !important;
+    }
+
+    .right-pic {
+        left: 900px !important;
+    }
+}
+
+@media screen and ( max-width: 1415px ) {
+    .bg-right {
+        width: 970px !important;
+    }
+
+    .left-pic {
+        width: 420px !important;
+    }
+}
+
+@keyframes transitionLeft {
+    0% {
+        margin-left: 0;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 116px;
+    }
+}
+
+@keyframes scale {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes floatTransition {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -40px;
+    }
+}
